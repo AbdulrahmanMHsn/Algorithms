@@ -1,4 +1,4 @@
-package search
+package searching
 
 /**
  * Binary search is an algorithm which finds the position of a target value within an array (Sorted)
@@ -12,7 +12,7 @@ package search
  * @return index of element if found or -1 if not found
  */
 
-fun <T : Comparable<T>> binarySearch(list:List<T>,item:T):Int{
+fun <T : Comparable<T>> binarySearch(list:List<T>,item:T): Int {
 
     var start = 0
 
@@ -40,4 +40,16 @@ fun <T : Comparable<T>> binarySearch(list:List<T>,item:T):Int{
     }
 
     return -1
+}
+
+fun main(){
+    val list = listOf(1,5,6,9,10,20)
+
+    val value = binarySearch(list,30)
+
+    if (value != -1){
+        print("Item is found")
+    }else{
+        print("Item is not found")
+    }
 }
